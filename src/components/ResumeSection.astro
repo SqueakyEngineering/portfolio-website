@@ -1,0 +1,33 @@
+---
+interface ResumeItem {
+  title: string;
+  meta: string;
+  bullets: string[];
+}
+
+interface Props {
+  heading: string;
+  items: ResumeItem[];
+}
+
+const { heading, items } = Astro.props;
+---
+
+<section class="border-t border-white/10 py-8">
+  <h2 class="font-mono text-sm uppercase tracking-[0.2em] text-teal-200">{heading}</h2>
+  <div class="mt-6 grid gap-6">
+    {
+      items.map((item) => (
+        <article>
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="text-lg font-semibold text-white">{item.title}</h3>
+            <p class="font-mono text-xs uppercase tracking-[0.16em] text-zinc-500">{item.meta}</p>
+          </div>
+          <ul class="mt-3 list-disc space-y-2 pl-5 text-sm leading-6 text-zinc-300">
+            {item.bullets.map((bullet) => <li>{bullet}</li>)}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
+</section>

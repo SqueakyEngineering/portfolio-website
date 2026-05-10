@@ -1,0 +1,80 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = (await getCollection('projects'))
+  .filter((project) => project.data.featured)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout
+  title="[PLACEHOLDER: Miles Scheetz]"
+  description="[PLACEHOLDER: Engineering portfolio for a software, systems, and aerospace-minded builder.]"
+>
+  <section class="relative min-h-[78svh] overflow-hidden border-b border-white/10">
+    <img
+      class="absolute inset-0 h-full w-full object-cover opacity-50"
+      src="/images/placeholder-engineering-hero.png"
+      alt="Placeholder engineering workspace with laptop, electronics, and aerospace notes"
+    />
+    <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,9,11,0.96)_0%,rgba(9,9,11,0.78)_44%,rgba(9,9,11,0.28)_100%)]"></div>
+    <div class="relative mx-auto flex min-h-[78svh] max-w-6xl items-center px-4 py-14 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <p class="font-mono text-sm uppercase tracking-[0.24em] text-teal-200">[PLACEHOLDER: Software Engineer | Systems Builder]</p>
+        <h1 class="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-6xl sm:leading-none lg:text-7xl">
+          [PLACEHOLDER: I build reliable tools for complex engineering problems.]
+        </h1>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-200">
+          [PLACEHOLDER: Short bio. Replace this with 2-3 sentences about the kind of engineering work you do, the systems you enjoy building, and the problems you want to solve.]
+        </p>
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+          <a class="rounded bg-teal-300 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-teal-200" href="/projects/">View projects</a>
+          <a class="rounded border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10" href="/resume/">Resume</a>
+          <a class="rounded border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10" href="/contact/">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-10 px-4 pb-16 pt-6 sm:px-6 sm:pb-20 sm:pt-10 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
+    <div>
+      <p class="font-mono text-sm uppercase tracking-[0.2em] text-amber-300">Short bio</p>
+      <h2 class="mt-4 text-3xl font-semibold text-white">[PLACEHOLDER: Engineering with a bias for clarity.]</h2>
+    </div>
+    <div class="space-y-5 text-base leading-8 text-zinc-300">
+      <p>[PLACEHOLDER: Add a concise paragraph about your background: degree, focus areas, internships, clubs, independent projects, or research.]</p>
+      <p>[PLACEHOLDER: Add a second paragraph about how you work: debugging habits, design tradeoffs, simulation, embedded systems, backend tools, data pipelines, or hardware/software integration.]</p>
+    </div>
+  </section>
+
+  <section class="border-y border-white/10 bg-zinc-900/40">
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="font-mono text-sm uppercase tracking-[0.2em] text-teal-200">Featured projects</p>
+          <h2 class="mt-4 text-3xl font-semibold text-white">[PLACEHOLDER: Selected builds]</h2>
+        </div>
+        <a class="text-sm font-medium text-teal-200 hover:text-teal-100" href="/projects/">All projects -&gt;</a>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto grid max-w-6xl gap-5 px-4 py-20 sm:px-6 md:grid-cols-2 lg:px-8">
+    <div class="rounded-lg border border-white/10 bg-zinc-900/70 p-6">
+      <p class="font-mono text-sm uppercase tracking-[0.2em] text-amber-300">Resume CTA</p>
+      <h2 class="mt-4 text-2xl font-semibold text-white">[PLACEHOLDER: Review the technical snapshot.]</h2>
+      <p class="mt-3 text-sm leading-6 text-zinc-300">[PLACEHOLDER: Link this to your latest PDF and keep the page version readable for recruiters.]</p>
+      <a class="mt-6 inline-flex rounded bg-white px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-zinc-200" href="/resume/">Open resume</a>
+    </div>
+    <div class="rounded-lg border border-white/10 bg-zinc-900/70 p-6">
+      <p class="font-mono text-sm uppercase tracking-[0.2em] text-teal-200">Contact CTA</p>
+      <h2 class="mt-4 text-2xl font-semibold text-white">[PLACEHOLDER: Start a focused conversation.]</h2>
+      <p class="mt-3 text-sm leading-6 text-zinc-300">[PLACEHOLDER: Replace this with the kinds of roles, collaborations, or technical topics you want inbound messages about.]</p>
+      <a class="mt-6 inline-flex rounded bg-teal-300 px-4 py-2 text-sm font-semibold text-zinc-950 hover:bg-teal-200" href="/contact/">Get in touch</a>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResumeSection from '../components/ResumeSection.astro';
+
+const experience = [
+  {
+    title: '[PLACEHOLDER: Engineering Intern, Company Name]',
+    meta: '[PLACEHOLDER: May 2025 - Aug 2025]',
+    bullets: [
+      '[PLACEHOLDER: Built or improved a technical system; include metric, language, and impact.]',
+      '[PLACEHOLDER: Collaborated with cross-functional teams; name the subsystem or workflow.]',
+      '[PLACEHOLDER: Reduced latency, increased reliability, improved analysis speed, or shipped a feature.]',
+    ],
+  },
+  {
+    title: '[PLACEHOLDER: Project Lead, Student Organization]',
+    meta: '[PLACEHOLDER: 2024 - Present]',
+    bullets: [
+      '[PLACEHOLDER: Led design reviews, test plans, manufacturing, simulation, or launch readiness.]',
+      '[PLACEHOLDER: Coordinated GitHub issues, documentation, CAD, embedded code, or data analysis.]',
+    ],
+  },
+];
+
+const education = [
+  {
+    title: '[PLACEHOLDER: University Name, B.S. Engineering]',
+    meta: '[PLACEHOLDER: Expected May 2027]',
+    bullets: [
+      '[PLACEHOLDER: Relevant coursework: data structures, controls, numerical methods, fluids, embedded systems.]',
+      '[PLACEHOLDER: Honors, scholarships, research lab, or leadership roles.]',
+    ],
+  },
+];
+
+const skills = [
+  {
+    title: '[PLACEHOLDER: Technical Skills]',
+    meta: '[PLACEHOLDER: Replace freely]',
+    bullets: [
+      '[PLACEHOLDER: Languages: TypeScript, Python, C/C++, MATLAB.]',
+      '[PLACEHOLDER: Tools: Git, Linux, Docker, CAD, simulation, CI/CD, testing.]',
+      '[PLACEHOLDER: Domains: backend systems, embedded systems, aerospace, telemetry, data analysis.]',
+    ],
+  },
+];
+---
+
+<Layout
+  title="Resume"
+  description="[PLACEHOLDER: Resume for a software and engineering-focused portfolio.]"
+>
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end md:justify-between">
+      <div>
+        <p class="font-mono text-sm uppercase tracking-[0.2em] text-teal-200">Resume</p>
+        <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">[PLACEHOLDER: Miles Scheetz]</h1>
+        <p class="mt-4 max-w-2xl text-base leading-8 text-zinc-300">
+          [PLACEHOLDER: One-sentence professional summary with target role, strongest domain, and the kind of work you want.]
+        </p>
+      </div>
+      <a class="inline-flex rounded bg-white px-5 py-3 text-sm font-semibold text-zinc-950 hover:bg-zinc-200" href="/resume.pdf">Download PDF</a>
+    </div>
+
+    <ResumeSection heading="Experience" items={experience} />
+    <ResumeSection heading="Education" items={education} />
+    <ResumeSection heading="Skills" items={skills} />
+  </section>
+</Layout>
