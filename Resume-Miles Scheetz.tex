@@ -1,0 +1,149 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,left=0.52in,right=0.52in,top=0.38in,bottom=0.34in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xparse}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1em}
+\setlength{\fboxsep}{0pt}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+
+\newcommand{\name}[1]{%
+  \begin{center}
+    {\fontsize{29}{31}\selectfont\bfseries #1}
+  \end{center}
+  \vspace{-0.28em}
+}
+
+\newcommand{\contact}[1]{%
+  \colorbox{black}{%
+    \parbox[c][22pt][c]{\linewidth}{%
+      \centering\color{white}\fontsize{10}{12}\selectfont\bfseries #1%
+    }%
+  }%
+  \vspace{0.36em}
+}
+
+\newcommand{\sectionheading}[1]{%
+  \vspace{0.34em}
+  {\fontsize{14}{15}\selectfont\bfseries #1}\par
+  \vspace{0.03em}\hrule height 0.9pt
+  \vspace{0.24em}
+}
+
+\newcommand{\entrytitle}[2]{%
+  \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+    {\fontsize{10.8}{12.1}\selectfont\bfseries #1} &
+    {\fontsize{10.8}{12.1}\selectfont\itshape #2} \\
+  \end{tabular*}
+  \vspace{-0.13em}
+}
+
+\NewDocumentCommand{\entryorg}{m g}{%
+  \IfNoValueTF{#2}{%
+    {\fontsize{10.8}{12.1}\selectfont\itshape #1}\par
+  }{%
+    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+      {\fontsize{10.8}{12.1}\selectfont\itshape #1} &
+      {\fontsize{10.8}{12.1}\selectfont\itshape #2} \\
+    \end{tabular*}%
+  }%
+  \vspace{0.1em}
+}
+
+\newcommand{\tightbullets}{%
+  \begin{itemize}[
+    leftmargin=1.52em,
+    label=\raisebox{0.1ex}{\footnotesize\textbullet},
+    itemsep=0pt,
+    topsep=0pt,
+    parsep=0pt,
+    partopsep=0pt
+  ]
+}
+\newcommand{\closetightbullets}{\end{itemize}\vspace{-0.03em}}
+
+\begin{document}
+
+\name{MILES SCHEETZ}
+\contact{St. Paul, MN 55118 \textbar{} (612) 709-9177 \textbar{} miles1scheetz@gmail.com \textbar{} linkedin.com/in/miles-scheetz/}
+
+\sectionheading{Work Experience}
+
+\entrytitle{Mechanical Engineering Co-op}{January 2026 to present}
+\entryorg{Hyperion Solutions, LLC -- Memphis, TN}
+\tightbullets
+  \item Computed stresses on elevator components with hand calculations and FEA to verify ASME A17.1 compliance
+  \item Created SolidWorks models and production drawings for 4 new product assemblies, including BOMs, GD\&T, material specifications, and manufacturing notes
+  \item Prototyped spring-loaded encoder wheel assembly; iterating 3D printed concepts, testing different tension mechanisms, and varying tire material to minimize slippage
+  \item Revised 100+ pages of traction machine manuals to clarify installation and maintenance instructions
+\closetightbullets
+
+\entrytitle{Manufacturing Engineering Co-op}{January 2025 to January 2026}
+\entryorg{Entegris, Inc. -- Chaska, MN}
+\tightbullets
+  \item Qualified 80+ products on secondary machines to increase routing flexibility and reduce capacity bottlenecks
+  \item Drove 15 Management of Change (MOC) projects to improve machining processes
+  \item Initiated, qualified, and implemented 130+ ECRs/ECOs for manufacturing process changes
+  \item Programmed Rockwell PLC and HMI for controlling exhaust fan system with ladder logic
+\closetightbullets
+
+\entrytitle{Rotary Press Operator}{October 2021 to January 2025}
+\entryorg{Innovize, LLC -- St. Paul, MN}
+\tightbullets
+  \item 3+ years of hands-on manufacturing experience setting up rotary presses and diagnosing mechanical issues
+  \item Coordinated assembly line with 1--5 technicians during medical device production runs
+  \item Spearheaded lean project for Medtronic Oval Tape production, improving process reliability by 230\% by implementing system to detect and alarm when input material is low
+\closetightbullets
+
+\sectionheading{Projects \& Leadership}
+
+\entryorg{Bethel University Rocket Club}
+\tightbullets
+  \item Built fiberglass rocket for 2025 NASA Space Grant Consortium Midwest Competition; placed 1st out of 13 teams
+  \item Conducted FEA on custom-made rocket components with SolidWorks
+  \item Designed and constructed an avionics bay using Arduino to track and store flight data
+  \item Developed and taught 5-week training curriculum on rocketry basics to 10+ new recruits
+  \item Mentored 10+ students on academic performance and career development
+  \item Achieved Level 2 High Power Rocketry certification under NAR
+\closetightbullets
+
+\entryorg{Railgun Hobby Project}
+\tightbullets
+  \item Calculated projectile kinematics and capacitor discharge behavior in Mathematica to determine design criteria
+  \item Modeled railgun body in SolidWorks using copper rails, 3D-printed components, and neodymium magnets
+  \item Designed unique spring-loaded armature to enhance rail contact and reduce wear
+  \item Increased hand-tool fabrication accuracy to within $\pm$.005\textquotedbl{} by creating 3D-printed drilling and alignment fixtures
+\closetightbullets
+
+\sectionheading{Education}
+
+\entrytitle{B.S. Mechanical Engineering}{Expected graduation May 2027}
+\entryorg{Bethel University -- St. Paul, MN}{August 2023 to Present}
+\tightbullets
+  \item 65 credits, 3.56 GPA, Dean's List Spring and Fall 2024
+  \item Relevant Coursework: Engineering Materials and Manufacturing, Electronics, Mechanics, and Fluid Dynamics
+  \item Member of Rocket Club and Sigma Pi Sigma honor society
+\closetightbullets
+
+\entryorg{Inver Hills Community College -- St. Paul, MN}{September 2022 to May 2023}
+\tightbullets
+  \item 20 credits, 3.75 GPA
+\closetightbullets
+
+\sectionheading{Skills and Certifications}
+\tightbullets
+  \item SolidWorks (Certified SolidWorks Professional) and Lean Manufacturing (MFRALL Certified Lean Practitioner)
+  \item SolidWorks Simulation FEA, SolidWorks 2D Drawings, 3D-Printing, Python, Arduino, MS Office, Industrial Machining, Medical Device QMS, GD\&T, Control Systems, PLC Programming, SAP ERP
+\closetightbullets
+
+\end{document}

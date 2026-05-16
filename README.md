@@ -19,7 +19,7 @@ src/
   pages/             Route files
 public/
   images/            Static image assets
-  resume.pdf         Replace with your real resume PDF
+  resume.pdf         Generated copy served by the site
 ```
 
 ## Commands
@@ -27,9 +27,30 @@ public/
 ```sh
 npm install
 npm run dev
+npm run resume:pdf
 npm run build
 npm run preview
 ```
+
+## Resume PDF
+
+Edit `Resume-Miles Scheetz.tex` as the source resume. To compile it locally and update the PDF served by the site, run:
+
+```powershell
+npm run resume:pdf
+```
+
+LaTeX Workshop and the script compile the source into `build/Resume-Miles Scheetz.pdf`, then copy that generated PDF to `public/resume.pdf` so the website can display and download it at the stable URL `/resume.pdf`. If `pdflatex` is not available, install MiKTeX and restart your terminal:
+
+```powershell
+winget install MiKTeX.MiKTeX
+```
+
+## Dev Editing
+
+Run the site locally with `npm run dev`, then open `http://localhost:4321/?edit=1` to turn on edit mode. Click outlined text to rewrite it; changes autosave to browser `localStorage` and persist across reloads and new windows for the same local URL.
+
+Use the floating toolbar to turn editing off, reset the current page, or clear all local edits. Add `?edit=0` to the URL if you want to force edit mode off.
 
 ## Replacing Content
 

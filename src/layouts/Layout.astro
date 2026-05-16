@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { title, description, pathname = Astro.url.pathname } = Astro.props;
-const siteName = '[PLACEHOLDER: Miles Scheetz]';
+const siteName = 'Miles Scheetz';
 const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
 const canonical = new URL(pathname, Astro.site ?? Astro.url.origin);
 ---
@@ -34,6 +34,7 @@ const canonical = new URL(pathname, Astro.site ?? Astro.url.origin);
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <title>{pageTitle}</title>
+    <script src="/dev-edit.js" defer></script>
   </head>
   <body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
     <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(20,184,166,0.12),transparent_34rem),linear-gradient(180deg,#09090b_0%,#18181b_45%,#0a0a0a_100%)]"></div>
