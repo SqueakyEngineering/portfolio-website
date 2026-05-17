@@ -1,18 +1,18 @@
 ---
-title: "[PLACEHOLDER: Rocket Club Launch Tools]"
-description: "[PLACEHOLDER: Planning and analysis tooling for launch checklists, component readiness, and flight data review.]"
+title: "Winning the 2025 Midwest High-Power Rocketry Competition"
+description: "Bethel University Rocket Club (and I) won first place in the biggest rocket competition in the Midwest!"
 publishDate: "2025-11-02"
+dateLabel: "2024-25"
 featured: true
-status: "[PLACEHOLDER: In progress]"
+status: "TEAM ROCKET"
 stack:
-  - Python
-  - GitHub Actions
-  - Data Analysis
-  - Documentation
-repoUrl: "https://github.com/placeholder-username/rocket-club-launch-tools"
-order: 2
-seoTitle: "[PLACEHOLDER: Rocket Club Launch Tools]"
-seoDescription: "[PLACEHOLDER: Case study for launch operations and engineering tooling.]"
+  - Leadership
+  - Design
+  - Deadlines
+  - Functional Testing
+order: 3
+seoTitle: "Winning the 2025 Midwest High-Power Rocketry Competition"
+seoDescription: "Case study for Bethel University Rocket Club's Midwest high-power rocketry competition win."
 ---
 
 ## Problem

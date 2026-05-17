@@ -92,6 +92,10 @@ a {
   outline: 2px solid rgb(94 234 212);
 }
 
+[data-dev-edit-multiline] {
+  white-space: pre-line;
+}
+
 @media (max-width: 640px) {
   .dev-edit-toolbar {
     right: 0.75rem;

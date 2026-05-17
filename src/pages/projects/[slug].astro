@@ -19,12 +19,12 @@ const description = project.data.seoDescription ?? project.data.description;
 <Layout title={title} description={description} pathname={`/projects/${project.id}/`}>
   <article class="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
     <a class="text-sm font-medium text-teal-200 hover:text-teal-100" href="/projects/">&lt;- All projects</a>
-    <header class="mt-8 border-b border-white/10 pb-10">
-      <p class="font-mono text-sm uppercase tracking-[0.2em] text-amber-300">{project.data.status}</p>
-      <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">{project.data.title}</h1>
-      <p class="mt-5 text-lg leading-8 text-zinc-300">{project.data.description}</p>
+    <header class="mt-8 border-b border-white/10 pb-10" data-dev-edit-scope={`project-detail:${project.id}`}>
+      <p class="font-mono text-sm uppercase tracking-[0.2em] text-amber-300" data-dev-edit-field="status">{project.data.status}</p>
+      <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl" data-dev-edit-field="title">{project.data.title}</h1>
+      <p class="mt-5 text-lg leading-8 text-zinc-300" data-dev-edit-field="description">{project.data.description}</p>
       <div class="mt-6 flex flex-wrap gap-2">
-        {project.data.stack.map((item) => <span class="rounded border border-white/10 px-2 py-1 text-xs text-zinc-300">{item}</span>)}
+        {project.data.stack.map((item, index) => <span class="rounded border border-white/10 px-2 py-1 text-xs text-zinc-300" data-dev-edit-field={`stack-${index}`}>{item}</span>)}
       </div>
       <div class="mt-8 flex flex-wrap gap-3">
         {project.data.repoUrl && <a class="rounded border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10" href={project.data.repoUrl}>Repository</a>}

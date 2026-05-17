@@ -7,7 +7,7 @@ Personal engineering portfolio built with Astro and Tailwind CSS. The content is
 - Astro 6
 - Tailwind CSS 4
 - Astro content collections for project case studies
-- Static deployment target for Vercel
+- Vercel deployment with a server endpoint for dev-mode authentication
 
 ## Project Structure
 
@@ -48,9 +48,9 @@ winget install MiKTeX.MiKTeX
 
 ## Dev Editing
 
-Run the site locally with `npm run dev`, then open `http://localhost:4321/?edit=1` to turn on edit mode. Click outlined text to rewrite it; changes autosave to browser `localStorage` and persist across reloads and new windows for the same local URL.
+Run the site with `npm run dev`, then use the floating **Dev mode** button to unlock edit mode. Use the floating toolbar to turn editing on, then click outlined text to rewrite it. Changes stay staged in the page while edit mode is on, and save through the local server only when you turn edit mode off.
 
-Use the floating toolbar to turn editing off, reset the current page, or clear all local edits. Add `?edit=0` to the URL if you want to force edit mode off.
+The password check runs through a server endpoint and the editor script is only served after authentication. The editor saves a change only when it can find one unambiguous source match; project card fields write back to the matching Markdown frontmatter. Use **Reset page** before navigating away if you want to restore the page text to the values it had when you loaded it.
 
 ## Replacing Content
 

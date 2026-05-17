@@ -1,19 +1,17 @@
 ---
-title: "[PLACEHOLDER: Railgun Telemetry Dashboard]"
-description: "[PLACEHOLDER: A fast data review interface for experiment logs, sensor traces, and test summaries.]"
+title: "Railgun (in progress)"
+description: "I'm building a railgun with an experimental low-voltage design."
 publishDate: "2026-01-15"
+dateLabel: "2025-Present"
 featured: true
-status: "[PLACEHOLDER: Prototype]"
+status: "HOBBY PROJECT"
 stack:
-  - TypeScript
-  - Astro
-  - Python
-  - Plotting
-repoUrl: "https://github.com/placeholder-username/railgun-telemetry-dashboard"
-liveUrl: "https://placeholder-project-demo.vercel.app"
+  - SolidWorks
+  - Arduino
+  - Rapid Prototyping
 order: 1
-seoTitle: "[PLACEHOLDER: Railgun Telemetry Dashboard]"
-seoDescription: "[PLACEHOLDER: Case study for a telemetry dashboard project.]"
+seoTitle: "Railgun (in progress)"
+seoDescription: "Case study for an experimental low-voltage railgun design."
 ---
 
 ## Problem

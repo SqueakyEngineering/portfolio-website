@@ -7,28 +7,33 @@ interface Props {
 
 const { project } = Astro.props;
 const href = `/projects/${project.id}/`;
+const dateLabel = project.data.dateLabel ?? project.data.publishDate.getFullYear();
 ---
 
-<article class="group flex h-full flex-col justify-between rounded-lg border border-white/10 bg-zinc-900/70 p-5 transition hover:-translate-y-1 hover:border-teal-300/60 hover:bg-zinc-900">
+<a
+  href={href}
+  class="group flex h-full flex-col justify-between rounded-lg border border-white/10 bg-zinc-900/70 p-5 transition hover:-translate-y-1 hover:border-teal-300/60 hover:bg-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300"
+  data-dev-edit-scope={`project-card:${project.id}`}
+>
   <div>
     <div class="mb-4 flex items-start justify-between gap-4">
-      <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber-300">{project.data.status}</p>
-      <span class="rounded border border-white/10 px-2 py-1 font-mono text-xs text-zinc-400">{project.data.publishDate.getFullYear()}</span>
+      <p class="font-mono text-xs uppercase tracking-[0.2em] text-amber-300" data-dev-edit-field="status">{project.data.status}</p>
+      <span class="rounded border border-white/10 px-2 py-1 font-mono text-xs text-zinc-400" data-dev-edit-field="date">{dateLabel}</span>
     </div>
     <h3 class="text-xl font-semibold text-white">
-      <a href={href} class="outline-none focus-visible:ring-2 focus-visible:ring-teal-300">
+      <span data-dev-edit-field="title">
         {project.data.title}
-      </a>
+      </span>
     </h3>
-    <p class="mt-3 text-sm leading-6 text-zinc-300">{project.data.description}</p>
+    <p class="mt-3 text-sm leading-6 text-zinc-300" data-dev-edit-field="description">{project.data.description}</p>
   </div>
   <div class="mt-6">
     <div class="flex flex-wrap gap-2">
-      {project.data.stack.map((item) => <span class="rounded border border-white/10 px-2 py-1 text-xs text-zinc-300">{item}</span>)}
+      {project.data.stack.map((item, index) => <span class="rounded border border-white/10 px-2 py-1 text-xs text-zinc-300" data-dev-edit-field={`stack-${index}`}>{item}</span>)}
     </div>
-    <a class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-teal-200 group-hover:text-teal-100" href={href}>
-      Read case study
+    <span class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-teal-200 group-hover:text-teal-100" data-dev-edit-field="cta">
+      See more
       <span aria-hidden="true">-&gt;</span>
-    </a>
+    </span>
   </div>
-</article>
+</a>
