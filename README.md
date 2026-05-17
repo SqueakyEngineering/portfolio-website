@@ -65,4 +65,4 @@ Project pages are powered by Markdown files in `src/content/projects/`. Add a ne
 3. Use the default Astro settings:
    - Build command: `npm run build`
    - Output directory: `dist`
-4. Update `site` in `astro.config.mjs` after Vercel gives you the production URL.
+4. Confirm `site` in `astro.config.mjs` matches the production URL: `https://milesscheetz.com`.
