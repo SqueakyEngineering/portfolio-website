@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = 'Project Page Under Construction';
+const description = 'This project page is still being built and will be available soon.';
+---
+
+<Layout title={title} description={description} pathname="/projects/under-construction/">
+  <section class="mx-auto flex min-h-[62vh] max-w-3xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
+    <a class="text-sm font-medium text-teal-200 hover:text-teal-100" href="/projects/">&lt;- All projects</a>
+    <p class="mt-10 font-mono text-sm uppercase tracking-[0.2em] text-amber-300">Coming soon</p>
+    <h1 class="mt-4 text-4xl font-semibold text-white sm:text-5xl">This project page is under construction.</h1>
+    <p class="mt-5 text-lg leading-8 text-zinc-300">
+      I'm still putting the details, images, celebrity cameos, and underwhelming one-liners together. Check back soon for the full write-up.
+    </p>
+  </section>
+</Layout>

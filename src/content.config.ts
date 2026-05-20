@@ -12,6 +12,7 @@ const projects = defineCollection({
     featured: z.boolean().default(false),
     status: z.string(),
     stack: z.array(z.string()),
+    cardImage: z.string().optional(),
     repoUrl: z.string().url().optional(),
     liveUrl: z.string().url().optional(),
     order: z.number().default(99),

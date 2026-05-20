@@ -9,6 +9,10 @@ stack:
   - SolidWorks
   - Arduino
   - Rapid Prototyping
+  - "Mathematica"
+  - "3D Printing"
+  - "Material Specs"
+cardImage: "/images/railgun-card.svg"
 order: 1
 seoTitle: "Railgun (in progress)"
 seoDescription: "Case study for an experimental low-voltage railgun design."
@@ -21,6 +25,11 @@ seoDescription: "Case study for an experimental low-voltage railgun design."
 ## Approach
 
 [PLACEHOLDER: Explain the architecture. Mention input formats, parsing, validation, charts, state management, deployment, or testing.]
+
+<figure class="railgun-inline-image">
+  <img class="railgun-inline-image__base" src="/images/railgun-contact-assembly.png" alt="SolidWorks model of the railgun contact assembly with copper rods and black side plates" />
+  <img class="railgun-inline-image__hover" src="/images/railgun-contact-assembly-hover.png" alt="" aria-hidden="true" />
+</figure>
 
 ## Results
 

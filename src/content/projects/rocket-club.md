@@ -8,7 +8,7 @@ status: "TEAM ROCKET"
 stack:
   - Leadership
   - Design
-  - Deadlines
+  - "Cross-functional Collaboration"
   - Functional Testing
 order: 3
 seoTitle: "Winning the 2025 Midwest High-Power Rocketry Competition"

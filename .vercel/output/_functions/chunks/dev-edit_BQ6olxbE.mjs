@@ -209,6 +209,8 @@ function candidateSourceFiles(edit) {
     candidates.unshift("src/pages/resume.astro");
   } else if (normalizedPath === "/projects/") {
     candidates.unshift("src/pages/projects/index.astro");
+  } else if (normalizedPath === "/projects/under-construction/") {
+    candidates.unshift("src/pages/projects/under-construction.astro");
   } else {
     const projectMatch = /^\/projects\/([^/]+)\/$/.exec(normalizedPath);
     if (projectMatch) {
