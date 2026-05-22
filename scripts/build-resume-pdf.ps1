@@ -6,7 +6,7 @@ $pdfName = "Resume-Miles Scheetz.pdf"
 $texPath = Join-Path $repoRoot $texName
 $buildDir = Join-Path $repoRoot "build"
 $sourcePdfPath = Join-Path $buildDir $pdfName
-$publicPdfPath = Join-Path $repoRoot "public\resume.pdf"
+$publicPdfPath = Join-Path $repoRoot "public\$pdfName"
 
 if (-not (Test-Path -LiteralPath $texPath)) {
   throw "Could not find LaTeX source: $texPath"
@@ -38,7 +38,7 @@ try {
   New-Item -ItemType Directory -Force -Path (Split-Path -Parent $publicPdfPath) | Out-Null
   Copy-Item -LiteralPath $sourcePdfPath -Destination $publicPdfPath -Force
 
-  Write-Host "Built build\$pdfName and copied it to public\resume.pdf"
+  Write-Host "Built build\$pdfName and copied it to public\$pdfName"
 } finally {
   Pop-Location
 }

@@ -142,44 +142,73 @@ a {
   width: min(50%, 24rem);
   margin: 0.25rem 0 1.5rem 2rem;
   overflow: hidden;
-  background:
-    radial-gradient(circle at top left, rgb(20 184 166 / 0.02), transparent 34rem),
-    linear-gradient(180deg, #18181b 0%, #0a0a0a 100%);
 }
 
-.project-content .railgun-inline-image img {
+.project-content .railgun-inline-image__base,
+.project-content .railgun-inline-image__hover {
   display: block;
   width: 100%;
   height: auto;
-  opacity: 0.96;
+  opacity: 1;
   -webkit-mask-image:
-    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 13%, #000 87%, transparent 100%);
+    linear-gradient(to right, transparent 0, rgb(0 0 0 / 0.02) 4%, rgb(0 0 0 / 0.08) 8%, rgb(0 0 0 / 0.2) 12%, rgb(0 0 0 / 0.38) 16%, rgb(0 0 0 / 0.6) 20%, rgb(0 0 0 / 0.78) 24%, rgb(0 0 0 / 0.9) 27%, rgb(0 0 0 / 0.97) 29%, #000 30%, #000 70%, rgb(0 0 0 / 0.97) 71%, rgb(0 0 0 / 0.9) 73%, rgb(0 0 0 / 0.78) 76%, rgb(0 0 0 / 0.6) 80%, rgb(0 0 0 / 0.38) 84%, rgb(0 0 0 / 0.2) 88%, rgb(0 0 0 / 0.08) 92%, rgb(0 0 0 / 0.02) 96%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.02) 4%, rgb(0 0 0 / 0.08) 8%, rgb(0 0 0 / 0.2) 12%, rgb(0 0 0 / 0.38) 16%, rgb(0 0 0 / 0.6) 20%, rgb(0 0 0 / 0.78) 24%, rgb(0 0 0 / 0.9) 27%, rgb(0 0 0 / 0.97) 29%, #000 30%, #000 70%, rgb(0 0 0 / 0.97) 71%, rgb(0 0 0 / 0.9) 73%, rgb(0 0 0 / 0.78) 76%, rgb(0 0 0 / 0.6) 80%, rgb(0 0 0 / 0.38) 84%, rgb(0 0 0 / 0.2) 88%, rgb(0 0 0 / 0.08) 92%, rgb(0 0 0 / 0.02) 96%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 13%, #000 87%, transparent 100%);
+    linear-gradient(to right, transparent 0, rgb(0 0 0 / 0.02) 4%, rgb(0 0 0 / 0.08) 8%, rgb(0 0 0 / 0.2) 12%, rgb(0 0 0 / 0.38) 16%, rgb(0 0 0 / 0.6) 20%, rgb(0 0 0 / 0.78) 24%, rgb(0 0 0 / 0.9) 27%, rgb(0 0 0 / 0.97) 29%, #000 30%, #000 70%, rgb(0 0 0 / 0.97) 71%, rgb(0 0 0 / 0.9) 73%, rgb(0 0 0 / 0.78) 76%, rgb(0 0 0 / 0.6) 80%, rgb(0 0 0 / 0.38) 84%, rgb(0 0 0 / 0.2) 88%, rgb(0 0 0 / 0.08) 92%, rgb(0 0 0 / 0.02) 96%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.02) 4%, rgb(0 0 0 / 0.08) 8%, rgb(0 0 0 / 0.2) 12%, rgb(0 0 0 / 0.38) 16%, rgb(0 0 0 / 0.6) 20%, rgb(0 0 0 / 0.78) 24%, rgb(0 0 0 / 0.9) 27%, rgb(0 0 0 / 0.97) 29%, #000 30%, #000 70%, rgb(0 0 0 / 0.97) 71%, rgb(0 0 0 / 0.9) 73%, rgb(0 0 0 / 0.78) 76%, rgb(0 0 0 / 0.6) 80%, rgb(0 0 0 / 0.38) 84%, rgb(0 0 0 / 0.2) 88%, rgb(0 0 0 / 0.08) 92%, rgb(0 0 0 / 0.02) 96%, transparent 100%);
   mask-composite: intersect;
+}
+
+.project-content .railgun-inline-image__base {
+  transition: opacity 120ms ease;
 }
 
 .project-content .railgun-inline-image__hover {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 180ms ease;
+  transition: opacity 120ms ease;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, rgb(0 0 0 / 0.03) 3%, rgb(0 0 0 / 0.13) 6%, rgb(0 0 0 / 0.28) 9%, rgb(0 0 0 / 0.5) 12%, rgb(0 0 0 / 0.72) 15%, rgb(0 0 0 / 0.9) 18%, #000 20%, #000 80%, rgb(0 0 0 / 0.9) 82%, rgb(0 0 0 / 0.72) 85%, rgb(0 0 0 / 0.5) 88%, rgb(0 0 0 / 0.28) 91%, rgb(0 0 0 / 0.13) 94%, rgb(0 0 0 / 0.03) 97%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.03) 3%, rgb(0 0 0 / 0.13) 6%, rgb(0 0 0 / 0.28) 9%, rgb(0 0 0 / 0.5) 12%, rgb(0 0 0 / 0.72) 15%, rgb(0 0 0 / 0.9) 18%, #000 20%, #000 80%, rgb(0 0 0 / 0.9) 82%, rgb(0 0 0 / 0.72) 85%, rgb(0 0 0 / 0.5) 88%, rgb(0 0 0 / 0.28) 91%, rgb(0 0 0 / 0.13) 94%, rgb(0 0 0 / 0.03) 97%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0, rgb(0 0 0 / 0.03) 3%, rgb(0 0 0 / 0.13) 6%, rgb(0 0 0 / 0.28) 9%, rgb(0 0 0 / 0.5) 12%, rgb(0 0 0 / 0.72) 15%, rgb(0 0 0 / 0.9) 18%, #000 20%, #000 80%, rgb(0 0 0 / 0.9) 82%, rgb(0 0 0 / 0.72) 85%, rgb(0 0 0 / 0.5) 88%, rgb(0 0 0 / 0.28) 91%, rgb(0 0 0 / 0.13) 94%, rgb(0 0 0 / 0.03) 97%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.03) 3%, rgb(0 0 0 / 0.13) 6%, rgb(0 0 0 / 0.28) 9%, rgb(0 0 0 / 0.5) 12%, rgb(0 0 0 / 0.72) 15%, rgb(0 0 0 / 0.9) 18%, #000 20%, #000 80%, rgb(0 0 0 / 0.9) 82%, rgb(0 0 0 / 0.72) 85%, rgb(0 0 0 / 0.5) 88%, rgb(0 0 0 / 0.28) 91%, rgb(0 0 0 / 0.13) 94%, rgb(0 0 0 / 0.03) 97%, transparent 100%);
+}
+
+.project-content .railgun-inline-image:hover .railgun-inline-image__base,
+.project-content .railgun-inline-image:focus-within .railgun-inline-image__base {
+  opacity: 0;
 }
 
 .project-content .railgun-inline-image:hover .railgun-inline-image__hover,
 .project-content .railgun-inline-image:focus-within .railgun-inline-image__hover {
-  opacity: 0.96;
+  opacity: 1;
 }
 
-.project-content .railgun-inline-image::after {
-  position: absolute;
-  inset: 0;
-  box-shadow: inset 0 0 2.25rem 1.5rem rgb(16 16 18 / 0.95);
-  content: "";
-  pointer-events: none;
+.project-content .railgun-math-image {
+  clear: both;
+  width: min(100%, 34rem);
+  margin-block: 3.5rem;
+}
+
+.project-content .railgun-math-image--right {
+  margin-left: auto;
+}
+
+.project-content .railgun-math-image--left {
+  margin-right: auto;
+}
+
+.project-content .railgun-math-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.28);
 }
 
 @media (max-width: 760px) {
@@ -188,5 +217,9 @@ a {
     width: 100%;
     max-width: 24rem;
     margin: 2rem auto;
+  }
+
+  .project-content .railgun-math-image {
+    margin-block: 2.5rem;
   }
 }

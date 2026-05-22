@@ -19,7 +19,8 @@ src/
   pages/             Route files
 public/
   images/            Static image assets
-  resume.pdf         Generated copy served by the site
+  Resume-Miles Scheetz.pdf
+                     Generated copy served by the site
 ```
 
 ## Commands
@@ -40,7 +41,7 @@ Edit `Resume-Miles Scheetz.tex` as the source resume. To compile it locally and 
 npm run resume:pdf
 ```
 
-LaTeX Workshop and the script compile the source into `build/Resume-Miles Scheetz.pdf`, then copy that generated PDF to `public/resume.pdf` so the website can display and download it at the stable URL `/resume.pdf`. If `pdflatex` is not available, install MiKTeX and restart your terminal:
+LaTeX Workshop and the script compile the source into `build/Resume-Miles Scheetz.pdf`, then copy that generated PDF to `public/Resume-Miles Scheetz.pdf` so the website can display and download it at `/Resume-Miles Scheetz.pdf`. If `pdflatex` is not available, install MiKTeX and restart your terminal:
 
 ```powershell
 winget install MiKTeX.MiKTeX
