@@ -188,6 +188,7 @@ function findUniqueSourceMatch(source: string, text: string) {
 function sourceTextCandidates(text: string) {
   return Array.from(new Set([
     text,
+    normalizeSmartPunctuation(text),
     text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;'),
     text.replaceAll('->', '-&gt;'),
     text.replaceAll('©', '&copy;'),
@@ -308,6 +309,14 @@ function relativeSourcePath(filePath: string) {
 
 function normalizeText(text: string) {
   return text.replace(/\r\n/g, '\n').trim();
+}
+
+function normalizeSmartPunctuation(text: string) {
+  return text
+    .replaceAll('\u2018', "'")
+    .replaceAll('\u2019', "'")
+    .replaceAll('\u201c', '"')
+    .replaceAll('\u201d', '"');
 }
 
 function escapeRegExp(value: string) {
