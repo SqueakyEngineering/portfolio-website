@@ -1,6 +1,8 @@
 (function () {
   const AUTH_ENDPOINT = '/api/dev-mode';
   const SCRIPT_ENDPOINT = '/api/dev-edit';
+  const ENABLE_DEV_MODE_LAUNCHER = false;
+  const DEV_MODE_QUERY_PARAM = 'dev-mode';
   const STYLE_ID = 'portfolio-dev-auth-style';
 
   const state = {
@@ -14,14 +16,25 @@
 
   async function init() {
     injectStyles();
-    createLauncher();
 
     if (await isAuthenticated()) {
       await loadDevTools(false);
       return;
     }
 
-    state.launcher.hidden = false;
+    if (shouldOpenPanel()) {
+      openPanel();
+      return;
+    }
+
+    if (ENABLE_DEV_MODE_LAUNCHER) {
+      createLauncher();
+      state.launcher.hidden = false;
+    }
+  }
+
+  function shouldOpenPanel() {
+    return new URLSearchParams(window.location.search).has(DEV_MODE_QUERY_PARAM);
   }
 
   async function isAuthenticated() {
