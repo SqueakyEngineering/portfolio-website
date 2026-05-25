@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const href = '/projects/under-construction/';
+const href = `/projects/${project.id}/`;
 const dateLabel = project.data.dateLabel ?? project.data.publishDate.getFullYear();
 const cardImage = project.data.cardImage;
 ---

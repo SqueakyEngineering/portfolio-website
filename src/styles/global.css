@@ -108,6 +108,7 @@ a {
 .project-content {
   max-width: none;
   color: rgb(212 212 216);
+  font-size: 1.0625rem;
   line-height: 1.75;
 }
 
@@ -136,12 +137,90 @@ a {
   color: rgb(253 230 138);
 }
 
+.project-content .railgun-staggered-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 3rem 4rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .railgun-design-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: center;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 3.5rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .railgun-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 3.5rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .railgun-page-staggered {
+  margin-bottom: 2rem;
+}
+
+.project-content .railgun-page-design,
+.project-content .railgun-math-image.railgun-page-video,
+.project-content .railgun-page-summary {
+  margin-block: 2rem;
+}
+
+.project-content .railgun-text-box {
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.48);
+  padding: 1.25rem;
+}
+
+.project-content .railgun-text-box h2 {
+  margin: 0;
+}
+
+.project-content .railgun-text-box p {
+  margin-top: 0;
+}
+
+.project-content .railgun-text-box--top {
+  grid-column: 2 / span 10;
+  grid-row: 1;
+  width: 100%;
+}
+
+.project-content .railgun-text-box--bottom {
+  grid-column: 8 / span 4;
+  grid-row: 2;
+  align-self: center;
+  justify-self: end;
+  width: 92%;
+}
+
 .project-content .railgun-inline-image {
   position: relative;
-  float: right;
-  width: min(50%, 24rem);
-  margin: 0.25rem 0 1.5rem 2rem;
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+.project-content .railgun-inline-image--staggered {
+  grid-column: 8 / span 4;
+  grid-row: 3;
+  align-self: center;
+  max-width: none;
 }
 
 .project-content .railgun-inline-image__base,
@@ -201,7 +280,32 @@ a {
   margin-right: auto;
 }
 
-.project-content .railgun-math-image img {
+.project-content .railgun-math-image--center {
+  margin-inline: auto;
+}
+
+.project-content .railgun-math-image--wide {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .railgun-math-image--wide img,
+.project-content .railgun-math-image--wide video {
+  grid-column: 2 / span 10;
+}
+
+.project-content .railgun-staggered-grid .railgun-math-image {
+  clear: none;
+  width: 100%;
+  margin-block: 0;
+}
+
+.project-content .railgun-math-image img,
+.project-content .railgun-math-image video {
   display: block;
   width: 100%;
   height: auto;
@@ -211,15 +315,540 @@ a {
   box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.28);
 }
 
+.project-content .project-media-story {
+  margin-bottom: 3rem;
+}
+
+.project-content .project-media-wide video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.project-content .project-media-vertical-crop img {
+  height: 40rem;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.project-content .project-media-pair {
+  grid-column: 7 / span 5;
+  width: 100%;
+  margin: 0;
+}
+
+.project-content .rocket-club-story-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 3rem 2rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .rocket-club-story-grid .railgun-text-box--top {
+  grid-column: 2 / span 10;
+  grid-row: 1;
+}
+
+.project-content .rocket-club-chronicle {
+  margin: 0;
+}
+
+.project-content .rocket-club-chronicle--left {
+  grid-column: 2 / span 5;
+  grid-row: 2;
+}
+
+.project-content .rocket-club-chronicle--right {
+  grid-column: 7 / span 5;
+  grid-row: 2;
+}
+
+.project-content .rocket-club-media-left {
+  grid-column: 2 / span 5;
+  grid-row: 3 / span 2;
+  width: 100%;
+  margin: 0;
+}
+
+.project-content .rocket-club-media-right {
+  grid-column: 7 / span 5;
+  width: 100%;
+  margin: 0;
+}
+
+.project-content .rocket-club-media-text-top {
+  grid-column: 7 / span 5;
+  grid-row: 3;
+  align-self: start;
+}
+
+.project-content .rocket-club-media-text-bottom {
+  grid-column: 7 / span 5;
+  grid-row: 4;
+  align-self: end;
+}
+
+.project-content .rocket-club-story-grid img,
+.project-content .project-media-gallery.rocket-club-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  object-fit: contain;
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.24);
+}
+
+.project-content .rocket-club-video video {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-content .rocket-club-wide-image {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-content .rocket-club-flight-grid,
+.project-content .rocket-club-recovery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .rocket-club-flight-grid {
+  align-items: start;
+  margin-block: 2rem 1.5rem;
+}
+
+.project-content .rocket-club-recovery-grid {
+  align-items: center;
+  margin-block: -4.5rem 2rem;
+}
+
+.project-content .rocket-club-flight-grid__video,
+.project-content .rocket-club-recovery-grid__image {
+  grid-column: 2 / span 5;
+  margin: 0;
+}
+
+.project-content .rocket-club-flight-grid__descent,
+.project-content .rocket-club-recovery-grid__text {
+  grid-column: 7 / span 5;
+  margin: 0;
+}
+
+.project-content .rocket-club-flight-grid img,
+.project-content .rocket-club-flight-grid video,
+.project-content .rocket-club-recovery-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  object-fit: contain;
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.24);
+}
+
+.project-content .project-media-gallery.rocket-club-gallery {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.project-content .project-media-gallery.rocket-club-gallery--single figure {
+  grid-column: 2 / span 5;
+}
+
+.project-content .project-media-gallery.rocket-club-gallery--community {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-content .project-media-section.rocket-club-bottom-section {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.project-content .project-media-section.rocket-club-bottom-section > .railgun-text-box,
+.project-content .project-media-section.rocket-club-bottom-section > .rocket-club-results-stack,
+.project-content .project-media-section.rocket-club-bottom-section > .rocket-club-gallery {
+  grid-column: 2 / span 10;
+}
+
+.project-content .rocket-club-results-stack {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.project-content .project-media-section.rocket-club-bottom-section .railgun-text-box {
+  width: 100%;
+  margin-inline: 0;
+}
+
+.project-content .rocket-club-results-stack figure {
+  margin: 0;
+}
+
+.project-content .rocket-club-results-stack img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  object-fit: contain;
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.22);
+}
+
+.project-content .certification-media-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: end;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 1rem 3.5rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .certification-media-grid__text {
+  grid-column: 2 / span 5;
+  grid-row: 1;
+  align-self: start;
+  width: 100%;
+}
+
+.project-content .certification-media-grid__pose {
+  grid-column: 2 / span 5;
+  grid-row: 1 / span 2;
+  align-self: end;
+  margin: 0;
+}
+
+.project-content .certification-media-grid__video {
+  grid-column: 7 / span 5;
+  grid-row: 1 / span 2;
+  align-self: start;
+  justify-self: end;
+  width: 100%;
+  margin: 0;
+}
+
+.project-content .certification-media-grid img,
+.project-content .certification-media-grid video,
+.project-content .project-media-card-image img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.24);
+}
+
+.project-content .certification-media-grid img {
+  height: 28rem;
+  object-fit: cover;
+}
+
+.project-content .certification-media-grid video {
+  height: auto;
+}
+
+.project-content .project-media-card-image {
+  width: min(100%, 36rem);
+  margin-block: 1.5rem 3.5rem;
+  margin-inline: auto;
+}
+
+.project-content .project-media-card-image img {
+  height: auto;
+}
+
+.project-content .project-media-section {
+  display: grid;
+  gap: 1.5rem;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 4rem 0;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .project-media-section .railgun-text-box {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
+.project-content .project-media-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  width: min(calc(100vw - 4rem), 74rem);
+  margin-block: 3.5rem;
+  margin-inline: 50%;
+  transform: translateX(-50%);
+}
+
+.project-content .project-media-section .project-media-gallery {
+  width: 100%;
+  margin-block: 0;
+  margin-inline: 0;
+  transform: none;
+}
+
+.project-content .project-media-gallery figure {
+  margin: 0;
+}
+
+.project-content .project-media-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  max-height: 28rem;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 0.5rem;
+  background: rgb(24 24 27 / 0.72);
+  object-fit: cover;
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.22);
+}
+
+.project-content .project-media-gallery--featured figure:first-child {
+  grid-column: span 2;
+}
+
+.project-content .project-media-gallery--single {
+  grid-template-columns: minmax(0, 32rem);
+  justify-content: center;
+}
+
+.project-content .project-media-gallery--pair {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.project-content .project-media-gallery--pair figure:first-child {
+  grid-column: 2 / span 5;
+}
+
+.project-content .project-media-gallery--pair figure:last-child {
+  grid-column: 7 / span 5;
+}
+
+.project-content .project-media-gallery--community img {
+  min-height: 14rem;
+}
+
+.project-content .railgun-math-image--upper {
+  grid-column: 2 / span 6;
+  grid-row: 2;
+}
+
+.project-content .railgun-math-image--lower {
+  grid-column: 2 / span 10;
+  grid-row: 3;
+  justify-self: center;
+  margin-top: 0;
+}
+
+.project-content .railgun-staggered-grid .railgun-math-image--lower {
+  width: 100%;
+}
+
+.project-content .railgun-design-grid .railgun-text-box {
+  grid-column: 2 / span 5;
+}
+
+.project-content .railgun-design-grid .railgun-inline-image {
+  grid-column: 7 / span 5;
+  max-width: none;
+}
+
+.project-content .railgun-summary-grid .railgun-text-box {
+  grid-column: 2 / span 10;
+}
+
 @media (max-width: 760px) {
-  .project-content .railgun-inline-image {
-    float: none;
-    width: 100%;
-    max-width: 24rem;
-    margin: 2rem auto;
+  .project-content .railgun-staggered-grid,
+  .project-content .rocket-club-story-grid,
+  .project-content .rocket-club-flight-grid,
+  .project-content .rocket-club-recovery-grid,
+  .project-content .railgun-design-grid,
+  .project-content .railgun-summary-grid,
+  .project-content .railgun-math-image--wide {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-block: 2.5rem;
   }
 
-  .project-content .railgun-math-image {
+  .project-content .railgun-staggered-grid {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .rocket-club-story-grid {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .rocket-club-flight-grid,
+  .project-content .rocket-club-recovery-grid {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .railgun-design-grid {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .railgun-summary-grid {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .project-media-section,
+  .project-content .certification-media-grid,
+  .project-content .project-media-gallery {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .railgun-math-image--wide {
+    width: 100%;
+    margin-inline: 0;
+    transform: none;
+  }
+
+  .project-content .railgun-text-box {
+    padding: 1rem;
+  }
+
+  .project-content .railgun-text-box--top,
+  .project-content .railgun-text-box--bottom,
+  .project-content .rocket-club-story-grid .railgun-text-box--top,
+  .project-content .rocket-club-story-grid .railgun-text-box--bottom,
+  .project-content .rocket-club-chronicle--left,
+  .project-content .rocket-club-chronicle--right,
+  .project-content .rocket-club-media-left,
+  .project-content .rocket-club-media-right,
+  .project-content .rocket-club-flight-grid__video,
+  .project-content .rocket-club-flight-grid__descent,
+  .project-content .rocket-club-recovery-grid__image,
+  .project-content .rocket-club-recovery-grid__text,
+  .project-content .railgun-inline-image--staggered,
+  .project-content .railgun-design-grid .railgun-text-box,
+  .project-content .railgun-design-grid .railgun-inline-image,
+  .project-content .railgun-summary-grid .railgun-text-box,
+  .project-content .project-media-pair,
+  .project-content .certification-media-grid__text,
+  .project-content .certification-media-grid__pose,
+  .project-content .certification-media-grid__video,
+  .project-content .railgun-math-image--wide video,
+  .project-content .railgun-math-image--upper,
+  .project-content .railgun-math-image--lower {
+    grid-column: auto;
+    grid-row: auto;
+    transform: none;
+    width: 100%;
+    margin-block: 0;
+  }
+
+  .project-content .railgun-inline-image {
+    width: 100%;
+    max-width: 24rem;
+    margin-inline: auto;
+  }
+
+  .project-content .railgun-math-image--upper,
+  .project-content .railgun-math-image--lower {
+    margin-top: 0;
+  }
+
+  .project-content .project-media-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     margin-block: 2.5rem;
+  }
+
+  .project-content .project-media-section {
+    margin-block: 2.5rem 0;
+  }
+
+  .project-content .project-media-section.rocket-club-bottom-section {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .project-content .project-media-section.rocket-club-bottom-section > .railgun-text-box,
+  .project-content .project-media-section.rocket-club-bottom-section > .rocket-club-results-stack,
+  .project-content .project-media-section.rocket-club-bottom-section > .rocket-club-gallery {
+    grid-column: auto;
+  }
+
+  .project-content .certification-media-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-block: 2.5rem;
+  }
+
+  .project-content .certification-media-grid img {
+    height: auto;
+  }
+
+  .project-content .certification-media-grid video {
+    height: auto;
+  }
+
+  .project-content .project-media-section .project-media-gallery {
+    margin-block: 0;
+  }
+
+  .project-content .project-media-gallery--featured figure:first-child {
+    grid-column: auto;
+  }
+
+  .project-content .project-media-gallery--single,
+  .project-content .project-media-gallery--pair {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content .project-media-gallery.rocket-club-gallery,
+  .project-content .project-media-gallery.rocket-club-gallery--community {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content .project-media-gallery--pair figure:first-child,
+  .project-content .project-media-gallery--pair figure:last-child,
+  .project-content .project-media-gallery.rocket-club-gallery--single figure {
+    grid-column: auto;
+  }
+
+  .project-content .project-media-gallery img {
+    min-height: 0;
+    max-height: none;
+    height: auto;
+  }
+
+  .project-content .project-media-vertical-crop img {
+    height: 32rem;
   }
 }
