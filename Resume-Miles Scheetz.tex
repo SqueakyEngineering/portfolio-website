@@ -1,6 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[letterpaper,left=0.52in,right=0.52in,top=0.38in,bottom=0.34in]{geometry}
+\usepackage[letterpaper,left=0.52in,right=0.52in,top=0.52in,bottom=0.52in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
@@ -43,19 +43,19 @@
 
 \newcommand{\entrytitle}[2]{%
   \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
-    {\fontsize{10.8}{12.1}\selectfont\bfseries #1} &
-    {\fontsize{10.8}{12.1}\selectfont\itshape #2} \\
+    {\fontsize{10}{12}\selectfont\bfseries #1} &
+    {\fontsize{10}{12}\selectfont\itshape #2} \\
   \end{tabular*}
   \vspace{-0.13em}
 }
 
 \NewDocumentCommand{\entryorg}{m g}{%
   \IfNoValueTF{#2}{%
-    {\fontsize{10.8}{12.1}\selectfont\itshape #1}\par
+    {\fontsize{10}{12}\selectfont\itshape #1}\par
   }{%
     \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
-      {\fontsize{10.8}{12.1}\selectfont\itshape #1} &
-      {\fontsize{10.8}{12.1}\selectfont\itshape #2} \\
+      {\fontsize{10}{12}\selectfont\itshape #1} &
+      {\fontsize{10}{12}\selectfont\itshape #2} \\
     \end{tabular*}%
   }%
   \vspace{0.1em}
@@ -76,17 +76,18 @@
 \begin{document}
 
 \name{MILES SCHEETZ}
-\contact{St. Paul, MN 55118 \textbar{} miles1scheetz@gmail.com \textbar{} linkedin.com/in/miles-scheetz/}
+\contact{St. Paul, MN 55118 \textbar{} (612) 709-9177 \textbar{} miles1scheetz@gmail.com \textbar{} linkedin.com/in/miles-scheetz/ \textbar{} milesscheetz.com}
 
 \sectionheading{Work Experience}
 
-\entrytitle{Mechanical Engineering Co-op}{January 2026 to present}
+\entrytitle{Mechanical Engineering Co-op}{January 2026 to Present}
 \entryorg{Hyperion Solutions, LLC -- Memphis, TN}
 \tightbullets
   \item Computed stresses on elevator components with hand calculations and FEA to verify ASME A17.1 compliance
-  \item Created SolidWorks models and production drawings for 4 new product assemblies, including BOMs, GD\&T, material specifications, and manufacturing notes
-  \item Prototyped spring-loaded encoder wheel assembly; iterated 3D printed concepts, tested different tension mechanisms, and varied tire material to minimize slippage
-  \item Revised 100+ pages of traction machine manuals to clarify installation and maintenance instructions
+  \item Released SolidWorks models and production drawing packages for 4 new elevator component assemblies, including BOMs, GD\&T, material specifications, and manufacturing notes
+  \item Prototyped spring-loaded encoder wheel assembly; iterated 3D-printed concepts, tested preload mechanisms, and evaluated tire materials to reduce slippage
+  \item Revised 100+ pages of traction machine manuals for installation clarity, maintenance procedures, and troubleshooting guidance
+  \item Built internal brake troubleshooting platform using Next.js, FastAPI, SQLAlchemy, and PostgreSQL to assist field service team in diagnosing machine brake issues from reported symptoms
 \closetightbullets
 
 \entrytitle{Manufacturing Engineering Co-op}{January 2025 to January 2026}
@@ -101,7 +102,7 @@
 \entrytitle{Rotary Press Operator}{October 2021 to January 2025}
 \entryorg{Innovize, LLC -- St. Paul, MN}
 \tightbullets
-  \item 3+ years of hands-on manufacturing experience setting up rotary presses and diagnosing mechanical issues
+  \item Obtained 3+ years of hands-on manufacturing experience setting up rotary presses and diagnosing mechanical issues
   \item Coordinated assembly line with 1--5 technicians during medical device production runs
   \item Spearheaded lean project for Medtronic Oval Tape production, improving process reliability by 230\% by implementing system to detect and alarm when input material is low
 \closetightbullets
@@ -121,9 +122,8 @@
 \entryorg{Railgun Hobby Project}
 \tightbullets
   \item Calculated projectile kinematics and capacitor discharge behavior in Mathematica to determine design criteria
-  \item Modeled railgun body in SolidWorks using copper rails, 3D-printed components, and neodymium magnets
-  \item Designed unique spring-loaded armature to enhance rail contact and reduce wear
-  \item Increased hand-tool fabrication accuracy to within $\pm$.005\textquotedbl{} by creating 3D-printed drilling and alignment fixtures
+  \item Modeled railgun body in SolidWorks with copper rails, 3D-printed components, and neodymium magnets
+  \item Designed unique spring-loaded armature to enhance rail contact and decrease wear on rails
 \closetightbullets
 
 \sectionheading{Education}
@@ -132,7 +132,7 @@
 \entryorg{Bethel University -- St. Paul, MN}{August 2023 to Present}
 \tightbullets
   \item 65 credits, 3.56 GPA, Dean's List Spring and Fall 2024
-  \item Relevant Coursework: Engineering Materials and Manufacturing, Electronics, Mechanics, and Fluid Dynamics
+  \item Relevant Coursework: Engineering Materials and Manufacturing, Electronics, Classical Mechanics, and Fluid Dynamics
   \item Member of Rocket Club and Sigma Pi Sigma honor society
 \closetightbullets
 
@@ -143,8 +143,8 @@
 
 \sectionheading{Skills and Certifications}
 \tightbullets
-  \item SolidWorks (Certified SolidWorks Professional) and Lean Manufacturing (MFRALL Certified Lean Practitioner)
-  \item SolidWorks Simulation FEA, SolidWorks 2D Drawings, 3D-Printing, Python, Arduino, MS Office, Industrial Machining, Medical Device QMS, GD\&T, Control Systems, PLC Programming, SAP ERP
+  \item Certifications: CSWP; CSWPA Sheet Metal, Weldments, Surfacing, Drawing Tools; lean manufacturing (MFRALL Certified Lean Practitioner); NAR High Power Rocketry Level 2; forklift certified
+  \item Skills: SolidWorks, SolidWorks Simulation FEA, 3D-printing, Arduino, Python, MS Office, CNC/Industrial Machining, Medical Device QMS, GD\&T, Rockwell ladder logic, PLC programming, SAP ERP, hand calculations, trade studies, technical writing, project management
 \closetightbullets
 
 \end{document}
