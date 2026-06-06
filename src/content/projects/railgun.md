@@ -31,7 +31,7 @@ seoDescription: "Case study for an experimental low-voltage railgun design."
   </figure>
   <div class="railgun-text-box railgun-text-box--bottom">
     <h2></h2>
-    <p>Nearly all of my initial assumptions were wrong, and I learned that the hard way. I’ve been building, testing, and redesigning for over a year, becoming intimately acquainted with the (somewhat) practical application of kinematics and E&M. After hundreds of design changes, I've finally got a design I'm (tentatively) happy with.</p>
+    <p>Nearly all of my initial assumptions were wrong, and I learned that the hard way. I’ve been building, testing, and redesigning for over a year, becoming intimately acquainted with the real-world application of kinematics and E&M. After hundreds of design changes, I've finally got a design I'm (tentatively) happy with.</p>
   </div>
 </section>
 
