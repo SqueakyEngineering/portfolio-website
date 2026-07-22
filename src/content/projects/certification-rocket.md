@@ -24,13 +24,13 @@ seoDescription: "Case study for a high power rocketry certification rocket."
     <img src="/certification-rocket/IMG_9695.jpg" alt="The Flying Lobster rocket on the field before certification launch" loading="lazy" />
   </figure>
   <div class="railgun-text-box railgun-text-box--bottom">
-    <p>Some things I didn't learn until launch day, like the embarrassment of showing up with an unpainted rocket. I also got experience making field repairs when my rocket's retention harness tore on my first launch. Thankfully, I got L1 certified on my second launch.</p>
+    <p>Some things I didn't learn until launch day, like the embarrassment of launching an unpainted rocket. I also got experience making field repairs when my rocket's retention harness tore on my first launch. Thankfully, I got L1 certified on my second launch.</p>
   </div>
 </section>
 
 <section class="certification-media-grid">
   <div class="railgun-text-box certification-media-grid__text">
-    <p>I needed a paint job for my L2 launch, and I went with the lobster theme because of a running joke that NAR's rules technically don't ban sending a lobster up in a rocket. I swapped out the torn nylon retention harness for one made of Kevlar and was feeling confident about my now battle-tested rocket. With a 649 N·s J-class motor, The Flying Lobster hit a maximum velocity of 471 mph and an apogee over 4,000 feet.</p>
+    <p>I needed a paint job for my L2 launch, and I went with the lobster theme because of a running joke about how NAR's rules technically don't ban sending a lobster up in a rocket. I swapped out the torn nylon retention harness for one made of Kevlar and was feeling confident about my now battle-tested rocket. With a 649 N·s J-class motor, The Flying Lobster hit a maximum velocity of 471 mph and an apogee over 4,000 feet.</p>
   </div>
   <figure class="certification-media-grid__pose">
     <img src="/certification-rocket/pose.jpg" alt="Miles posing with the Flying Lobster certification rocket" loading="lazy" />

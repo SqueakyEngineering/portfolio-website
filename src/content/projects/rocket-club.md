@@ -55,7 +55,7 @@ seoDescription: "Case study for Bethel University Rocket Club's Midwest high-pow
     <img src="/rocket-club/recovery.JPG" alt="Rocket club members recovering the rocket after flight" loading="lazy" />
   </figure>
   <div class="railgun-text-box rocket-club-recovery-grid__text">
-    <p>We competed against 13 teams and won first place. We had the closest launch to 1000 feet and the launch with the highest apogee.</p>
+    <p>We competed against 13 teams and won first place. We had both the closest launch to 1000 feet and the launch with the highest apogee.</p>
   </div>
 </section>
 
