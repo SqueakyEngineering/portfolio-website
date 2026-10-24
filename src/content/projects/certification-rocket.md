@@ -18,7 +18,7 @@ seoDescription: "Case study for a high power rocketry certification rocket."
 
 <section class="railgun-staggered-grid project-media-story">
   <div class="railgun-text-box railgun-text-box--top">
-    <p>The Flying Lobster was my first high power rocket; I built it from a LOC-IV X2 kit. In preparation for my L1 launch, I learned about about aerodynamics, simulation, hands-on fabrication techniques, and rocket stability.</p>
+    <p>The Flying Lobster was my first high power rocket; I built it from a LOC-IV X2 kit. In preparation for my L1 launch, I learned about aerodynamics, simulation, hands-on fabrication techniques, and rocket stability.</p>
   </div>
   <figure class="railgun-math-image railgun-math-image--upper project-media-vertical-crop">
     <img src="/certification-rocket/IMG_9695.jpg" alt="The Flying Lobster rocket on the field before certification launch" loading="lazy" />

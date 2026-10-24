@@ -21,7 +21,7 @@ seoDescription: "Case study for an experimental low-voltage railgun design."
 <section class="railgun-staggered-grid railgun-page-staggered">
   <div class="railgun-text-box railgun-text-box--top">
     <h2></h2>
-    <p>I've been obsessed with railguns since middle school. I decided to actually build one in 2025 after some making some design sketches and feasibility calculations on a notepad.</p>
+    <p>I've been obsessed with railguns since middle school. I decided to actually build one in 2025 after making some design sketches and feasibility calculations on a notepad.</p>
   </div>
   <figure class="railgun-math-image railgun-math-image--upper">
     <img src="/images/math1.jpg" alt="Handwritten railgun math notes and calculations" />
